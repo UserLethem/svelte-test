@@ -1,5 +1,5 @@
 <main>
-    <h1>My to-do list</h1>
+    <h1>Мой список дел</h1>
     <form on:submit|preventDefault={add}>
         <input bind:value={newItem} placeholder="Enter to-do" />
         <button class="add-todo" on:click={add}><span>+</span></button>
@@ -24,18 +24,18 @@
 </main>
 
 <script>
-    let newItem = '';
+    let newItem = "";
     let todoList = [];
     function add() {
-    if (newItem !== '') {
+    if (newItem !== "") {
         todoList = [
         ...todoList,
         {
-            задача: newItem,
-            завершено: false,
+            task: newItem,
+            completed: false,
         },
         ];
-        newItem = '';
+        newItem = "";
     }
     }
 
